@@ -38,6 +38,12 @@ def createFridaTestCode():
         
         resultCode.append(code)
     
-    print(resultCode)
+    return resultCode
 
-createFridaTestCode()
+def saveHookCode():
+    fridaHookCode = createFridaTestCode()
+    with open("C22BA0.js", "wt", encoding="utf-8") as hookCodeFile:
+        for hookCode in fridaHookCode:
+            hookCodeFile.writelines(hookCode + "\n")
+
+saveHookCode()
