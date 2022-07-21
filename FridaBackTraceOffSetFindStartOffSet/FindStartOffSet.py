@@ -40,7 +40,7 @@ def intToHex():
     for OffSet in StartOffSet:
         HexStartOffSet.append(hex(OffSet))
 
-    return HexStartOffSet
+    return list(set(HexStartOffSet))
 
 def SaveHexStartOffSet():
     DesktopPath = os.path.join(os.path.expanduser('~'),'Desktop') + "\\" + "ResultStartOffSet.txt"
